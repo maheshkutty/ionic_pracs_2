@@ -1,17 +1,101 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Museum App </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+    <ion-toolbar class="header">
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <swiper #swiper [zoom]="true" [autoplay]="true">
+    <ng-template swiperSlide>
+      <div
+        style="background-image: url('/assets/alh_ald-AM-MIN-649-2703.jpg')"
+        class="imageSlider"
+      >
+        <div>
+          <p class="textimage">Radha and Krishna, Allahabad Museum</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        style="background-image: url('/assets/gom_goa-acc-no-0320-104.jpg')"
+        class="imageSlider"
+      >
+        <p class="textimage">VISHNU, Archaeological Survey of India, Goa</p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        style="background-image: url('/assets/nat_del-79-496-127.jpg')"
+        class="imageSlider"
+      >
+        <p class="textimage">WARLI PAINTING, National Museum, New Delhi</p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        style="background-image: url('/assets/ngma_blr-acc-no-02329-458.jpg')"
+        class="imageSlider"
+      >
+        <p class="textimage">
+          VIEW OF FORT OF TRICHNOPOLY, National Gallery of Modern Art, Bengaluru
+        </p>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        style="background-image: url('/assets/ngma_del-ngma-00078-11.jpg')"
+        class="imageSlider"
+      >
+        <p class="textimage">
+          OFFERING TO KRISHNA, National Gallery of Modern Art, New Delhi
+        </p>
+      </div>
+    </ng-template>
+  </swiper>
+  <div>
+    <h2 class="weluserdesign">Welcome User,</h2>
+  </div>
+  <h4 style="color: #44318d; font-weight: bold; margin: 10px">
+    Popular Museum
+  </h4>
+  <div class="container">
+    <div class="scroll" scrollX="true">
+      <div style="width: 500px">
+        <ion-card>
+          <img src="/assets/alla_image.jpg" />
+          <ion-card-header>
+            <ion-card-title class="textTitle"><a routerLink="/museumpage">Allahabad Museum</a></ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="word-wrap: break-word">
+            The Allahabad Museum is centrally located in the Civil Lines area of
+            the city in a lush green garden at Chandrashekhar Azad Park,
+            popularly known as Company Bagh. It is about 3 kms away from the
+            Allahabad railway junction and almost equidistant from three
+            different Railway Stations such as Prayag, Rambagh and Allahabad
+            junction and about 12 km away from Bamrauli Airport
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div style="width: 500px">
+        <ion-card>
+          <img src="/assets/asi_goa.jpg" />
+          <ion-card-header>
+            <ion-card-title class="textTitle">Card Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            The Archaeological Survey of India, established in 1861 is an
+            attached office under the Ministry of Culture dedicated to the
+            protection, preservation and conservation of the national monuments
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
 </ion-content>

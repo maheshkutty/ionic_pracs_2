@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Museum App </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +10,51 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <p class="maintitle">Current Exhibition</p>
+  <ion-card>
+    <img src="/assets/exb2.jpg" />
+    <ion-card-header>
+      <ion-card-title class="exbtitle">
+        Beyond the Bounds of History: A Collaborative Exhibition Between the
+        Palace Museum and Dunhuang
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text class="container">
+        <ion-icon name="location" class="iconStyle"></ion-icon>
+        <span class="placetext">Mumbai</span>
+      </ion-text>
+      <ion-text class="container">
+        <ion-icon name="calendar" class="iconStyle"></ion-icon>
+        <ion-datetime displayFormat="MMM D, YY" min="2021" max="2025" value="2021-10-05" class="datetimetext"></ion-datetime>
+        <ion-datetime displayFormat="MMM D, YY" min="2021" max="2025" value="2021-10-15" class="datetimetext"></ion-datetime>
+      </ion-text>
+      <div style="display: flex; justify-content: center;">
+        <ion-button (click)="presentAlertConfirm()">Book</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <img src="/assets/exb1.jpg" />
+    <ion-card-header>
+      <ion-card-title class="exbtitle">
+        Auspicious Brilliance: Exquisite Court Enamels from the Palace Museum
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text class="container">
+        <ion-icon name="location" class="iconStyle"></ion-icon>
+        <span class="placetext">Mumbai</span>
+      </ion-text>
+      <ion-text class="container">
+        <ion-icon name="calendar" class="iconStyle"></ion-icon>
+        <ion-datetime displayFormat="MMM D, YY" min="2021" max="2025" value="2021-10-30" class="datetimetext"></ion-datetime>
+        <br/>
+        <ion-datetime displayFormat="MMM D, YY" min="2021" max="2025" value="2021-11-11" class="datetimetext"></ion-datetime>
+      </ion-text>
+      <div style="display: flex; justify-content: center;">
+        <ion-button (click)="presentAlertConfirm()">Book</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

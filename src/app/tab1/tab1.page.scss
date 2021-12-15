@@ -1,0 +1,92 @@
+.header {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 100%
+  );
+  color: white;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 50px auto;
+}
+
+.swiper-slide {
+  background: #f1f1f1;
+  color: #000;
+  text-align: center;
+  line-height: 300px;
+}
+
+.textimage {
+  display: block;
+  float: right;
+  margin-top: 7.5rem;
+  margin-right: 0.2rem;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-size: 0.6rem;
+}
+
+.imageSlider {
+  background-size: contain;
+  height: 150px;
+  width: 100%;
+  background-repeat: round;
+}
+
+.container {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+
+  .scroll {
+    width: 500px;
+    flex: 0 0 auto;
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+}
+.container::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.weluserdesign {
+  color: #44318d;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.textTitle{
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

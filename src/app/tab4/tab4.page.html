@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feedback Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 style="color: #44318d; font-weight: bold; margin-left: 10px">
+    Feedback Form
+  </h3>
+  <form [formGroup]="feedBackForm">
+    <ion-item required="true">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input id="name" required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Event Name</ion-label>
+      <ion-input id="ename"></ion-input>
+    </ion-item>
+    <ion-list style="margin-right: 5px; margin-top: -2px; font-size: 20px">
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label style="font-size: 15px">Gender</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio slot="start" value="male"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio slot="start" value="female"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-item>
+      <ion-label position="floating">Rate</ion-label>
+      <ion-range
+        dualKnobs="true"
+        min="1"
+        max="5"
+        step="1"
+        snaps="true"
+        style="
+          --pin-color: rgba(131, 58, 180, 1);
+          --bar-border-radius: 2px;
+          --knob-background: rgba(131, 58, 180, 1);
+          --bar-background-active: rgba(131, 58, 180, 1);
+        "
+      ></ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comment</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button color="success" expand="block" (click)="showmsg('Thank you for your feedback.')">Submit</ion-button>
+        <ion-button color="primary" expand="block" (click)="presentActionSheet()">Other Operations</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
